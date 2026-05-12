@@ -8,14 +8,15 @@ const storage = multer.diskStorage({
 
   destination: function (req, file, cb) {
 
-  const dir = "uploads/";
+    const dir = "uploads/";
 
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir);
-  }
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
 
-  cb(null, dir);
-}
+    cb(null, dir);
+  },
+
   filename: function(req, file, cb) {
     cb(null, Date.now() + "-" + file.originalname);
   }
