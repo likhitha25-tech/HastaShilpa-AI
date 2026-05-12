@@ -21,7 +21,7 @@ function App() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/upload",
+        "https://hastashilpa-backend.onrender.com/upload",
         formData
       );
 
@@ -41,7 +41,7 @@ function App() {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/ai/generate",
+        "https://hastashilpa-backend.onrender.com/ai/generate",
         {
           style: style
         }
