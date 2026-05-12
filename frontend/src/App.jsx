@@ -36,24 +36,17 @@ function App() {
 
   };
 
-  const generateAIImage = async () => {
+  const generateAIImage = () => {
 
-    try {
+    const imageMap = {
+      Modern: "/designs/modern.jpg",
+      Luxury: "/designs/luxury.jpg",
+      Minimal: "/designs/minimal.jpg",
+      Traditional: "/designs/traditional.jpg",
+      Scandinavian: "/designs/scandinavian.jpg"
+    };
 
-      const res = await axios.post(
-        "https://hastashilpa-backend.onrender.com/ai/generate",
-        {
-          style: style
-        }
-      );
-
-      setGeneratedImage(res.data[0].url);
-
-    } catch (error) {
-
-      console.log(error);
-
-    }
+    setGeneratedImage(imageMap[style]);
 
   };
 
