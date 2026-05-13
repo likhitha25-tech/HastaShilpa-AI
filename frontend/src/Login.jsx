@@ -23,6 +23,8 @@ function Login() {
 
       setMessage("Login Successful");
 
+      window.location.href = "/home";
+
     } catch (error) {
 
       setMessage("Login Failed");
@@ -64,6 +66,19 @@ function Login() {
 
         <p className="mt-4 text-center text-green-600">
           {message}
+        </p>
+
+        <p className="mt-4 text-center">
+
+          Don't have an account?
+
+          <a
+            href="/signup"
+            className="text-blue-600 ml-2"
+          >
+            Signup
+          </a>
+
         </p>
 
       </div>
