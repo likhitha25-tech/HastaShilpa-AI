@@ -50,11 +50,26 @@ function Home() {
 
   };
 
+  const logoutUser = () => {
+
+    localStorage.removeItem("token");
+
+    window.location.href = "/";
+
+  };
+
   return (
 
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-10">
 
       <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-xl">
+
+        <button
+          onClick={logoutUser}
+          className="bg-red-500 text-white px-4 py-2 rounded-lg mb-4 float-right"
+        >
+          Logout
+        </button>
 
         <h1 className="text-4xl font-bold text-center mb-6 text-green-700">
           HastaShilpa AI
