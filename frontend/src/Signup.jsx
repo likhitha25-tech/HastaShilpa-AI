@@ -23,6 +23,8 @@ function Signup() {
 
       setMessage(res.data.message);
 
+      window.location.href = "/";
+
     } catch (error) {
 
       setMessage("Signup Failed");
@@ -71,6 +73,19 @@ function Signup() {
 
         <p className="mt-4 text-center text-green-600">
           {message}
+        </p>
+
+        <p className="mt-4 text-center">
+
+          Already have an account?
+
+          <a
+            href="/"
+            className="text-blue-600 ml-2"
+          >
+            Login
+          </a>
+
         </p>
 
       </div>
