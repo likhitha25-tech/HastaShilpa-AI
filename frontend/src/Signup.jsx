@@ -13,7 +13,7 @@ function Signup() {
     try {
 
       const res = await axios.post(
-        "https://hastashilpa-backend.onrender.com/auth/signup",
+        "https://hastashilpa-backend.onrender.com/auth/signup/",
         {
           name,
           email,
@@ -26,6 +26,8 @@ function Signup() {
       window.location.href = "/";
 
     } catch (error) {
+
+      console.log(error);
 
       setMessage("Signup Failed");
 

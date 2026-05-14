@@ -12,7 +12,7 @@ function Login() {
     try {
 
       const res = await axios.post(
-        "https://hastashilpa-backend.onrender.com/auth/login",
+        "https://hastashilpa-backend.onrender.com/auth/login/",
         {
           email,
           password
@@ -26,6 +26,8 @@ function Login() {
       window.location.href = "/home";
 
     } catch (error) {
+
+      console.log(error);
 
       setMessage("Login Failed");
 
