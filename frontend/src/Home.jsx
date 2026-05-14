@@ -119,6 +119,20 @@ function Home() {
           Generate AI Design
         </button>
 
+        <a
+          href="https://www.mediafire.com/file/awvihh8rvldtzky/app-debug.apk/file"
+          target="_blank"
+          rel="noreferrer"
+        >
+
+          <button
+            className="bg-purple-600 text-white px-4 py-2 rounded-lg w-full mt-4"
+          >
+            Download Android App
+          </button>
+
+        </a>
+
         {generatedImage && (
 
           <div className="mt-8">
